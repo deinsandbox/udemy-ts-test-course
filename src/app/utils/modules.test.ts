@@ -1,11 +1,11 @@
+import * as StringUtils from './string';
+
 jest.mock('./string', () => ({
     // preserve the original module
     ...jest.requireActual('./string'),
     // override only the function that you want to mock
     calculateComplexity: jest.fn().mockImplementation(() => 10),
 }));
-
-import * as StringUtils from './string';
 
 jest.mock('node:crypto', () => ({
     randomUUID: () => '1',
