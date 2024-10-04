@@ -4,7 +4,7 @@ import * as IdGenerator from "./IdGenerator";
 type someTypeWithId = {
   id: string;
   name: string;
-  color: string;
+  color: string; 
 };
 
 describe("DataBase", () => {
